@@ -1165,9 +1165,6 @@ window.$ === undefined && (window.$ = Zepto)
     triggerGlobal(settings, context, 'ajaxSend', [xhr, settings])
   }
   function ajaxSuccess(data, xhr, settings) {
-    //chao - debug
-    console.log('ajaxSuccess ' + JSON.stringify(data) + ', ' + JSON.stringify(xhr) + ', ' + JSON.stringify(settings))
-    
     var context = settings.context, status = 'success'
     settings.success.call(context, data, status, xhr)
     triggerGlobal(settings, context, 'ajaxSuccess', [xhr, settings, data])
@@ -1175,9 +1172,6 @@ window.$ === undefined && (window.$ = Zepto)
   }
   // type: "timeout", "error", "abort", "parsererror"
   function ajaxError(error, type, xhr, settings) {
-    //chao - debug
-    console.log('zepto ajaxError ' + error + ', ' + type + ', ' + JSON.stringify(xhr) + ', ' + JSON.stringify(settings))
-
     var context = settings.context
     settings.error.call(context, xhr, type, error)
     triggerGlobal(settings, context, 'ajaxError', [xhr, settings, error])
@@ -1327,9 +1321,6 @@ window.$ === undefined && (window.$ = Zepto)
     settings.headers = $.extend(baseHeaders, settings.headers || {})
 
     xhr.onreadystatechange = function(){
-      //chao - debug
-      //console.log('zepto xhr ajax after ' + JSON.stringify(xhr))
-
       if (xhr.readyState == 4) {
         xhr.onreadystatechange = empty;
         clearTimeout(abortTimeout)

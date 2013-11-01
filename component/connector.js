@@ -12,24 +12,24 @@ define([
 	 * @return {String} 当前接口请求的 server 地址
 	 */
 	var processServer = function(options) {
+		//var server
+
 		/*if (options._server) {
 			server = options._server + (options._server.lastIndexOf('/') === options._server.length - 1 ? '' : '/')
 		} else if (ENV.forcetkClient) {
 			server = ENV.forcetkClient.instanceUrl + (ENV.restAPI || '/services/apexrest') + '/'
 		}*/
 
-		//if (options._server) {
-			if (ENV.forcetkClient) {
-				server = ENV.forcetkClient.instanceUrl + (ENV.restAPI || '/services/apexrest') + '/'
-			}
-		//}
+		if (ENV.forcetkClient) {
+			server = ENV.forcetkClient.instanceUrl + (ENV.restAPI || '/services/apexrest') + '/'
+		}
 
 		if (ENV.mock) {
 			server = ENV.server || (location.protocol + '//' + location.host + App.root)
 			server += (server.lastIndexOf('/') === server.length - 1 ? '' : '/') + 'mock/'
 		}
 
-		console.log('in connector, server is ' + server)
+		console.log('connector server ' + server)
 
 		return server
 	}
@@ -244,7 +244,7 @@ define([
 		options.cache = false
 
 		//chao - debug
-		options.crossDomain = false
+		options.crossDomain = true
 
 		if (!options._cache) {
 			options.startTime = new Date()
