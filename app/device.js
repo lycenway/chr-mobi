@@ -24,7 +24,7 @@ define([
 
                 window.alert = function(message, alertCallback, title, buttonName) {
                     if (!title) {
-                        title = 'CRM+'
+                        title = '工务先锋 ChrMobi'
                     }
                     navigator.notification.alert(message, alertCallback, title, buttonName)
                 }
