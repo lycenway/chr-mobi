@@ -1412,7 +1412,7 @@ footer {
   background-color: #FFFFFF;
 }
 .tuan-icon:before {
-  content: "泥浆";
+  content: "道床";
 }
 .iconframe.tuan-icon,
 .bigiconframe.tuan-icon.selected {
@@ -1420,7 +1420,7 @@ footer {
   border-color: #FF717D;
 }
 .ka-icon:before {
-  content: "螺栓";
+  content: "道岔";
 }
 .iconframe.ka-icon,
 .bigiconframe.ka-icon.selected {
@@ -1428,7 +1428,7 @@ footer {
   border-color: #6EBCE5;
 }
 .ding-icon:before {
-  content: "波磨";
+  content: "钢轨";
 }
 .iconframe.ding-icon,
 .bigiconframe.ding-icon.selected {
@@ -1436,7 +1436,7 @@ footer {
   border-color: #0AB9A2;
 }
 .tui-icon:before {
-  content: "断轨";
+  content: "附属设备";
 }
 .iconframe.tui-icon,
 .bigiconframe.tui-icon.selected {

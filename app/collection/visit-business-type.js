@@ -1,21 +1,21 @@
 define(['backbone', 'model/visit-business-type'], function(Backbone, VisitBusinessType) {
     var visitBusinessTypes = [{
-        name: '泥浆',
+        name: '道床',
         id: 1,
         className: 'tuan-icon',
         selected: false
     }, {
-        name: '螺栓',
+        name: '道岔',
         id: 3,
         className: 'ka-icon',
         selected: false
     }, {
-        name: '波磨',
+        name: '钢轨',
         id: 4,
         className: 'ding-icon',
         selected: false
     }, {
-        name: '断轨',
+        name: '附属设备',
         id: 2,
         className: 'tui-icon',
         selected: false
