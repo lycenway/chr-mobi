@@ -1,14 +1,4 @@
 <% _.each(visits, function (item, key) { %>
-<div class="visit-metric clearfix">
-	<dl>
-		<dt><h3>本周</h3></dt>
-		<dd><h3> <%= item.metric.visitNumberByWeek %> </h3><span class="small">次采集</span></dd>
-	</dl>
-	<dl>
-		<dt><h3>本月</h3></dt>
-		<dd><h3> <%= item.metric.visitNumberByMonth %> </h3><span class="small">次采集</span></dd>
-	</dl>
-</div>
 <div class="visit-today clearfix">
 	<dl>
 		<dt><h3>今日</h3></dt>
@@ -30,7 +20,11 @@
 
 		<div class="item-body">	
 			<dl class="clearfix">
-				<dt>病害类型：</dt>
+				<dt>病害位置：</dt>
+				<dd><%= detailItem.caseType %></dd>
+			</dl>
+			<dl class="clearfix">
+				<dt>病害概要：</dt>
 				<dd>
 				<% _.each(detailItem.businessType, function(typeItem, typeKey){ %>
 				    <% if(typeItem.selected) {%>
@@ -43,12 +37,6 @@
 			<dl class="clearfix">
 				<dt>采集人：</dt>
 				<dd><%= detailItem.owner.name %></dd>
-			</dl>
-			<% } %>
-			<% if(detailItem.partner){ %>
-			<dl class="clearfix">
-				<dt>陪同人：</dt>
-				<dd><%= detailItem.partner.name %></dd>
 			</dl>
 			<% } %>
 			<dl class="clearfix">
