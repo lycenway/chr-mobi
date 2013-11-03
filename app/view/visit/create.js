@@ -4,13 +4,14 @@ define([
 	'app',
 	'../../tpl-data-bind',
 	'./create-select-status',
+	'./create-select-casetype',
 	'./create-select-date',
 	'../../ga',
 	'app/../../component/autoSave',
 	'../../loading',
 	'../../collection/selected-account',
 	'../../../component/autogrow-textarea'
-], function(Backbone, $, App, Tpl, SelectStatusView, SelectStatusDate, gaPlugin, localCache, Loading, SelectedAccounts) {
+], function(Backbone, $, App, Tpl, SelectStatusView, SelectCaseTypeView, SelectStatusDate, gaPlugin, localCache, Loading, SelectedAccounts) {
 	return Backbone.View.extend({
 		className: 'visitCreateContainer',
 		
@@ -23,7 +24,8 @@ define([
 			'tap .visit-type-edit .bigiconframe': 'setVisitType',
 			'swipeRight .visit-mate-edit': 'removePartner',
 			'tap .marketing-tools .container': 'selectMarketingTool',
-			'tap .caseimage-tools .container': 'setCasePicture'
+			'tap .caseimage-tools .container': 'setCasePicture',
+			'tap .visit-casetype-edit': 'showSelectCaseType'
 		},
 
 		initialize: function() {
@@ -138,6 +140,13 @@ define([
 				model: this.model
 			})
 			selectStatus.render()
+		},
+
+		showSelectCaseType: function(e) {
+			var selectCaseType = new SelectCaseTypeView({
+				model: this.model
+			})
+			selectCaseType.render()
 		},
 
 		showDateSelect: function(e) {

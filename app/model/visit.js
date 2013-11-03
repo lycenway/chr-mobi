@@ -2,12 +2,13 @@ define(['backbone',
     '../../component/date',
     'zepto',
     '../collection/visit-business-type',
+    '../collection/visit-case-type',
     '../collection/visitStage',
     '../collection/marketingTool',
     '../collection/visitIssue',
     './account',
     './visitPartner'
-], function(Backbone, DateUtil, $, VisitBusinessTypeCollection, VisitStageCollection, MarketingToolCollection, VisitIssueCollection,Account, VisitPartner) {
+], function(Backbone, DateUtil, $, VisitBusinessTypeCollection, VisitCaseTypeCollection, VisitStageCollection, MarketingToolCollection, VisitIssueCollection,Account, VisitPartner) {
     return Backbone.Model.extend({
         url: function() {
             var url = '/visit'
@@ -57,6 +58,10 @@ define(['backbone',
             this.set('visitIssue', list.join(';'))
         },
 
+        setCaseType: function(value) {
+            this.set('caseType', value)
+        },
+
         setBusinessType: function(value, selected) {
             var list
             if (this.get('businessType')) {
@@ -98,6 +103,10 @@ define(['backbone',
             var stage = data.stage
             data.stage = new VisitStageCollection().fetch()
             this.convertToArray(stage, data.stage)
+
+            var caseType = data.caseType
+            data.caseType = new VisitCaseTypeCollection().fetch()
+            this.convertToArray(caseType, data.caseType)
 
             var marketingTools = data.marketingTools
             data.marketingTools = new MarketingToolCollection().fetch()
@@ -166,6 +175,7 @@ define(['backbone',
                 description: '',
                 visitDate: DateUtil.formateStdString(new Date()),
                 businessType: '',
+                caseType: '',
                 partner: {},
                 marketingTools: '',
                 visitIssue: '',

@@ -9,10 +9,24 @@
 				</span>
 			</dd>
 		</dl>
-		<dl data-type="visitTime">
-			<dt class="required">采集时间</dt>
+		<dl class="visit-casetype-edit" data-type="caseType">
+			<dt class="required">病害位置</dt>
 			<dd>
-				<span class="visit-date-edit"><%= visit.visitDate %></span>
+				<span class="visitCaseType">
+				<% _.each(visit.caseType, function (item, key) { %>
+					<% if(item.selected) {%>
+					<%= item.name%>
+					<% }%>
+				<% }) %>
+				</span>
+			</dd>
+		</dl>
+		<dl class="visit-type-edit" data-type="visitType">
+			<dt class="required">病害概要</dt>
+			<dd>
+				<% _.each(visit.businessType.reverse(), function (item, key) { %>
+				<span class="bigiconframe <%= item.className %> <%=item.selected ? 'selected' : 'not-selected'%>" data-value="<%= item.name%>"></span>
+				<% }) %>
 			</dd>
 		</dl>
 		<dl class="visit-status-edit" data-type="visitStatus">
@@ -27,16 +41,13 @@
 				</span>
 			</dd>
 		</dl>
-		<dl class="visit-type-edit" data-type="visitType">
-			<dt class="required">病害类型</dt>
+		<dl data-type="visitTime">
+			<dt class="required">采集时间</dt>
 			<dd>
-				<% _.each(visit.businessType.reverse(), function (item, key) { %>
-				<span class="bigiconframe <%= item.className %> <%=item.selected ? 'selected' : 'not-selected'%>" data-value="<%= item.name%>"></span>
-				<% }) %>
+				<span class="visit-date-edit"><%= visit.visitDate %></span>
 			</dd>
 		</dl>
 	</div>
-
     <div class="select-caseimagespan caseimage-tools clearfix">
         <div class="container">
             <div class="img">
@@ -49,8 +60,7 @@
             </div>
         </div>
 		<img class="caseimage" src="data:image/jpeg;base64,<%= visit.casePicture%>"/>
-    </div>
-    	
+    </div>  	
 	<div class="subhead">病害描述</div>
 	<div class="textarea visit-description">
 		<textarea rows="5" autocomplete="off"><%= visit.description%></textarea>
