@@ -1096,6 +1096,9 @@ footer {
   font-weight: bolder;
   margin-left: 0.2em;
 }
+.visits-create .visit-type-edit {
+  height: 16em;
+}
 .visits-create .visit-type-edit dd {
   position: relative;
   top: -0.4em;
@@ -1457,13 +1460,13 @@ footer {
 .chuang01-icon:before {
   content: "道床板结";
 }
-.chuang01-icon:before {
+.chuang02-icon:before {
   content: "道床粉碎";
 }
-.chuang01-icon:before {
+.chuang03-icon:before {
   content: "轨道板开裂";
 }
-.chuang01-icon:before {
+.chuang04-icon:before {
   content: "轨道板离缝";
 }
 
@@ -1482,58 +1485,84 @@ footer {
 .gui01-icon:before {
   content: "钢轨波磨";
 }
-.gui01-icon:before {
+.gui02-icon:before {
   content: "低接头";
 }
-.gui01-icon:before {
+.gui03-icon:before {
   content: "轨头剥离";
 }
-.gui01-icon:before {
+.gui04-icon:before {
   content: "轨头横向裂纹";
 }
-.gui01-icon:before {
+.gui05-icon:before {
   content: "轨头纵向裂纹";
 }
-.gui01-icon:before {
+.gui06-icon:before {
   content: "轨头表面压陷";
 }
-.gui01-icon:before {
+.gui07-icon:before {
   content: "轨腰伤损";
 }
-.gui01-icon:before {
+.gui08-icon:before {
   content: "轨底伤损";
 }
-.gui01-icon:before {
+.gui09-icon:before {
   content: "钢轨折断";
 }
-.gui01-icon:before {
+.gui10-icon:before {
   content: "钢轨锈蚀";
 }
-.gui01-icon:before {
+.gui11-icon:before {
   content: "钢轨磨耗";
 }
-.gui01-icon:before {
+.gui12-icon:before {
   content: "轨头扁疤";
 }
-.gui01-icon:before {
+.gui13-icon:before {
   content: "钢轨侧磨";
 }
-.gui01-icon:before {
+.gui14-icon:before {
   content: "钢轨垂磨";
 }
-.gui01-icon:before {
+.gui15-icon:before {
   content: "光带不良";
 }
-.gui01-icon:before {
+.gui16-icon:before {
   content: "钢轨的其它伤损";
 }
 
-.iconframe.kou01-icon,
-.bigiconframe.kou01-icon.selected,
-.iconframe.kou01-icon,
-.bigiconframe.kou01-icon.selected,
-.iconframe.kou01-icon,
-.bigiconframe.kou01-icon.selected {
+.iconframe.gui01-icon,
+.bigiconframe.gui01-icon.selected,
+.iconframe.gui02-icon,
+.bigiconframe.gui02-icon.selected,
+.iconframe.gui03-icon,
+.bigiconframe.gui03-icon.selected,
+.iconframe.gui04-icon,
+.bigiconframe.gui04-icon.selected,
+.iconframe.gui05-icon,
+.bigiconframe.gui05-icon.selected,
+.iconframe.gui06-icon,
+.bigiconframe.gui06-icon.selected,
+.iconframe.gui07-icon,
+.bigiconframe.gui07-icon.selected,
+.iconframe.gui08-icon,
+.bigiconframe.gui08-icon.selected,
+.iconframe.gui09-icon,
+.bigiconframe.gui09-icon.selected,
+.iconframe.gui10-icon,
+.bigiconframe.gui10-icon.selected,
+.iconframe.gui11-icon,
+.bigiconframe.gui11-icon.selected,
+.iconframe.gui12-icon,
+.bigiconframe.gui12-icon.selected,
+.iconframe.gui13-icon,
+.bigiconframe.gui13-icon.selected,
+.iconframe.gui14-icon,
+.bigiconframe.gui14-icon.selected,
+.iconframe.gui15-icon,
+.bigiconframe.gui15-icon.selected,
+.iconframe.gui16-icon,
+.bigiconframe.gui16-icon.selected {
   background-color: #6EBCE5;
   border-color: #6EBCE5;
 }

@@ -24,7 +24,7 @@
 		<dl class="visit-type-edit" data-type="visitType">
 			<dt class="required">病害概要</dt>
 			<dd>
-				<% _.each(visit.businessType.reverse(), function (item, key) { %>
+				<% _.each(visit.businessType, function (item, key) { %>
 				<span class="bigiconframe <%= item.className %> <%=item.selected ? 'selected' : 'not-selected'%>" data-value="<%= item.name%>"></span>
 				<% }) %>
 			</dd>
