@@ -1424,41 +1424,159 @@ footer {
   color: #e6e6e6;
   border-color: #e6e6e6;
 }
-.tuan-icon.not-selected,
-.ka-icon.not-selected,
-.ding-icon.not-selected,
-.tui-icon.not-selected {
+.chuang01-icon.not-selected,
+.chuang02-icon.not-selected,
+.chuang03-icon.not-selected,
+.chuang04-icon.not-selected,
+.gui01-icon.not-selected,
+.gui02-icon.not-selected,
+.gui03-icon.not-selected,
+.gui04-icon.not-selected,
+.gui05-icon.not-selected,
+.gui06-icon.not-selected,
+.gui07-icon.not-selected,
+.gui08-icon.not-selected,
+.gui09-icon.not-selected,
+.gui10-icon.not-selected,
+.gui11-icon.not-selected,
+.gui12-icon.not-selected,
+.gui13-icon.not-selected,
+.gui14-icon.not-selected,
+.gui15-icon.not-selected,
+.gui16-icon.not-selected,
+.kou01-icon.not-selected,
+.kou02-icon.not-selected,
+.kou03-icon.not-selected,
+.ji01-icon.not-selected,
+.ji02-icon.not-selected,
+.ji03-icon.not-selected,
+.ji04-icon.not-selected {
   background-color: #FFFFFF;
 }
-.tuan-icon:before {
-  content: "道床";
+
+.chuang01-icon:before {
+  content: "道床板结";
 }
-.iconframe.tuan-icon,
-.bigiconframe.tuan-icon.selected {
+.chuang01-icon:before {
+  content: "道床粉碎";
+}
+.chuang01-icon:before {
+  content: "轨道板开裂";
+}
+.chuang01-icon:before {
+  content: "轨道板离缝";
+}
+
+.iconframe.chuang01-icon,
+.bigiconframe.chuang01-icon.selected,
+.iconframe.chuang02-icon,
+.bigiconframe.chuang02-icon.selected,
+.iconframe.chuang03-icon,
+.bigiconframe.chuang03-icon.selected,
+.iconframe.chuang04-icon,
+.bigiconframe.chuang04-icon.selected {
   background-color: #FF717D;
   border-color: #FF717D;
 }
-.ka-icon:before {
-  content: "道岔";
+
+.gui01-icon:before {
+  content: "钢轨波磨";
 }
-.iconframe.ka-icon,
-.bigiconframe.ka-icon.selected {
+.gui01-icon:before {
+  content: "低接头";
+}
+.gui01-icon:before {
+  content: "轨头剥离";
+}
+.gui01-icon:before {
+  content: "轨头横向裂纹";
+}
+.gui01-icon:before {
+  content: "轨头纵向裂纹";
+}
+.gui01-icon:before {
+  content: "轨头表面压陷";
+}
+.gui01-icon:before {
+  content: "轨腰伤损";
+}
+.gui01-icon:before {
+  content: "轨底伤损";
+}
+.gui01-icon:before {
+  content: "钢轨折断";
+}
+.gui01-icon:before {
+  content: "钢轨锈蚀";
+}
+.gui01-icon:before {
+  content: "钢轨磨耗";
+}
+.gui01-icon:before {
+  content: "轨头扁疤";
+}
+.gui01-icon:before {
+  content: "钢轨侧磨";
+}
+.gui01-icon:before {
+  content: "钢轨垂磨";
+}
+.gui01-icon:before {
+  content: "光带不良";
+}
+.gui01-icon:before {
+  content: "钢轨的其它伤损";
+}
+
+.iconframe.kou01-icon,
+.bigiconframe.kou01-icon.selected,
+.iconframe.kou01-icon,
+.bigiconframe.kou01-icon.selected,
+.iconframe.kou01-icon,
+.bigiconframe.kou01-icon.selected {
   background-color: #6EBCE5;
   border-color: #6EBCE5;
 }
-.ding-icon:before {
-  content: "钢轨";
+
+.kou01-icon:before {
+  content: "扣压力衰减";
 }
-.iconframe.ding-icon,
-.bigiconframe.ding-icon.selected {
+.kou02-icon:before {
+  content: "螺帽丢失";
+}
+.kou03-icon:before {
+  content: "扣件断裂";
+}
+.iconframe.kou01-icon,
+.bigiconframe.kou01-icon.selected,
+.iconframe.kou02-icon,
+.bigiconframe.kou02-icon.selected,
+.iconframe.kou03-icon,
+.bigiconframe.kou03-icon.selected {
   background-color: #0AB9A2;
   border-color: #0AB9A2;
 }
-.tui-icon:before {
-  content: "附属设备";
+
+.ji01-icon:before {
+  content: "路基沉降";
 }
-.iconframe.tui-icon,
-.bigiconframe.tui-icon.selected {
+.ji02-icon:before {
+  content: "路基隆起";
+}
+.ji03-icon:before {
+  content: "路基坍塌";
+}
+.ji04-icon:before {
+  content: "翻浆冒泥";
+}
+.iconframe.ji01-icon,
+.bigiconframe.ji01-icon.selected, 
+.iconframe.ji02-icon,
+.bigiconframe.ji02-icon.selected,
+.iconframe.ji03-icon,
+.bigiconframe.ji03-icon.selected,
+.iconframe.ji04-icon,
+.bigiconframe.ji04-icon.selected {
   background-color: #ECA027;
   border-color: #ECA027;
 }

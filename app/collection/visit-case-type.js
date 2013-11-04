@@ -11,17 +11,14 @@ define(['backbone', 'model/visit-case-type'], function(Backbone, VisitCaseType) 
                 name: '道床',
                 id: 1
             }, {
-                name: '道岔',
+                name: '钢轨',
                 id: 2
             }, {
-                name: '钢轨',
+                name: '扣件',
                 id: 3
             }, {
-                name: '附属设备',
+                name: '路基',
                 id: 4
-            }, {
-                name: '其他',
-                id: 5
             }]
         }
     })
