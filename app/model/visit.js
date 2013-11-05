@@ -145,12 +145,12 @@ define(['backbone',
             if (!this.get('account').id || this.get('account').id == '') {
                 return '请填写线|段|里程！'
             }
-            if (this.get('visitDate') == '') {
-                return '请填写采集日期！'
-            }
-            if (new Date(this.get('visitDate')).getTime() > new Date().getTime()) {
-                return '采集日期不能为将来的日期！'
-            }
+            // if (this.get('visitDate') == '') {
+            //     return '请填写采集日期！'
+            // }
+            // if (new Date(this.get('visitDate')).getTime() > new Date().getTime()) {
+            //     return '采集日期不能为将来的日期！'
+            // }
             if (this.get('stage') == '') {
                 return '请填写病害程度！'
             }
