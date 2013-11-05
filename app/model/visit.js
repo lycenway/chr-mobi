@@ -142,7 +142,6 @@ define(['backbone',
         },
 
         validate: function() {
-            /*
             if (!this.get('account').id || this.get('account').id == '') {
                 return '请填写线|段|里程！'
             }
@@ -158,7 +157,6 @@ define(['backbone',
             if (this.get('businessType') == '') {
                 return '请填写病害类型！'
             }
-            */
         },
 
         save: function(attributes, options){

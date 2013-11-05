@@ -13,7 +13,7 @@ define(['backbone',
             var self = this
             var data = this.toJSON()
             $.each(data[0].visitList, function(index, model) {
-                model.businessType = (new VisitBusinessTypeCollection).getSelected(model.businessType)
+                model.businessType = (new VisitBusinessTypeCollection).getSelected(model.businessType, model.caseType)
                 model.description = self.formatVisitDescription(model.description)
             })
             return data
