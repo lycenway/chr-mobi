@@ -211,6 +211,31 @@ define(['backbone', 'model/visit-business-type'], function(Backbone, VisitBusine
             return result
         },
 
+        getSelected: function(value, caseType) {
+            var self = this
+            var result = []
+
+            var list
+            if (value) {
+                var list = value.split(';')
+            } else {
+                list = []
+            }
+
+            _.each(self.models, function(businessType) {
+                if(_.indexOf(list, businessType.get('name')) == -1) {
+                    businessType.set('selected', false)
+                } else {
+                    businessType.set('selected', true)
+                }
+                if (caseType && businessType.get('caseType') == caseType) {
+                    result.push(businessType.toJSON())
+                }
+            })
+
+            return result
+        },
+
         findById: function(id) {
             return this.findWhere({
                 id: id

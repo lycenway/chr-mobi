@@ -14,8 +14,6 @@ define([
 		render: function() {
 			var self = this
 
-			console.log('this model caseType', this.model.caseType)
-
 			Tpl.bind(
 				'visit/create-select-casetype', {
 					caseType: this.model.toViewJSON().caseType
@@ -39,7 +37,7 @@ define([
 		},
 
 		submit: function(e) {
-			this.model.set('caseType', $(e.currentTarget).text())
+			this.model.setCaseType($(e.currentTarget).text())
 
 			var self = this
 			self.hide()

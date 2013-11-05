@@ -59,7 +59,10 @@ define(['backbone',
         },
 
         setCaseType: function(value) {
-            this.set('caseType', value)
+            if (value != this.get('caseType')) {
+                this.set('caseType', value)
+                this.set('businessType','')                
+            }
         },
 
         setBusinessType: function(value, selected) {
@@ -93,20 +96,24 @@ define(['backbone',
         toViewJSON: function() {
             var data = this.toJSON()
 
-            console.log('Visit Model: ' + JSON.stringify(data))
+            console.log('Visit before: ' + JSON.stringify(data))
 
             if(data.visitDate && data.visitDate != '') {
                 data.visitDate = DateUtil.formateStdString(new Date(data.visitDate))
             }
-            data.businessType = (new VisitBusinessTypeCollection()).getSelected(data.businessType)
-
-            var stage = data.stage
-            data.stage = new VisitStageCollection().fetch()
-            this.convertToArray(stage, data.stage)
 
             var caseType = data.caseType
             data.caseType = new VisitCaseTypeCollection().fetch()
             this.convertToArray(caseType, data.caseType)
+            console.log('caseType ', caseType)
+
+            console.log('businessType 1', data.businessType)
+            data.businessType = (new VisitBusinessTypeCollection()).getSelected(data.businessType, caseType)
+            console.log('businessType 2', data.businessType)
+
+            var stage = data.stage
+            data.stage = new VisitStageCollection().fetch()
+            this.convertToArray(stage, data.stage)
 
             var marketingTools = data.marketingTools
             data.marketingTools = new MarketingToolCollection().fetch()
@@ -115,6 +122,8 @@ define(['backbone',
             var visitIssue = data.visitIssue
             data.visitIssue = new VisitIssueCollection().fetch()
             this.convertToArray(visitIssue, data.visitIssue)
+
+            console.log('Visit after: ' + JSON.stringify(data))
 
             return data
         },
