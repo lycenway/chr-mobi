@@ -14,9 +14,11 @@ define([
 		render: function() {
 			var self = this
 
+			console.log(this.model.toJSON().caseMile)
+
 			Tpl.bind(
 				'visit/create-select-casemile', {
-					caseMile: this.caseMile
+					caseMile: this.model.toJSON().caseMile
 				},
 				function(html) {
 					var $html = $(html)
@@ -37,7 +39,11 @@ define([
 		},
 
 		submit: function(e) {
-			this.model.set('caseMile', MileUtil.formatMile(this.caseMile))
+			var $input = $(e.currentTarget).parent().find('.input-casemile-num')
+			console.log($input)
+			this.model.set('caseMile', {
+				num:$input.val(),
+				kiloShow:MileUtil.formatMile($input.val())})
 			var self = this
 			self.hide()
 		},

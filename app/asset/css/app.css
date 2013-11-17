@@ -819,6 +819,26 @@ footer {
   color: #A5A5A5;
   font-size: 1.2em;
 }
+.input-casemile {
+  position: absolute;
+  z-index: 1000;
+  left: 15%;
+  width: 70%;
+  background-color: #fff;
+  border-bottom: 1px solid #cccccc;  
+}
+.input-casemile .select-casemile-ok {
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  font-size: 1.5em;
+  color: #ea9710;
+  text-align: center;
+  padding: 0.5em 0.5em;
+}
+.input-casemile-num {
+  font-size: 1.2em;
+}
 .select-date {
   position: absolute;
   z-index: 1000;

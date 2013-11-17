@@ -97,10 +97,10 @@ define([
             var $currentTarget = $(e.currentTarget)
             var $img = $currentTarget.find('.img')
             //var $caseimage = $img.find('.caseimage')
-            console.log('camera e: ' , $currentTarget)
-            console.log('camera img: ' , $img)
+            //console.log('camera e: ' , $currentTarget)
+            //console.log('camera img: ' , $img)
             //console.log('camera caseimage: ' , $caseimage)
-            console.log('this model ' + self.model)
+            //console.log('this model ' + self.model)
 
 			if ($currentTarget.hasClass('visit-img-album-tap')) {
 				Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY
