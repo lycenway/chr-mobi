@@ -179,7 +179,7 @@ define(['backbone',
         defaults: function() {
             return {
                 account: {},
-                caseMile: {num: 256.128, kiloShow: MileUtil.formatMile(256.128)},
+                caseMile: {num: '256.128', kiloShow: MileUtil.formatMile(256.128)},
                 id: null,
                 stage: '',
                 description: '',

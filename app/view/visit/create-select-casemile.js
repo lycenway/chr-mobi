@@ -63,6 +63,8 @@ define([
 				self.hide()
 			})
 			this.setSize()
+			var $input = $(document).find('.input-casemile-num')
+			$input.focus()
 		},
 
 		hide: function() {

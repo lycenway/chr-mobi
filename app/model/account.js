@@ -9,7 +9,10 @@ define(['backbone'], function (Backbone) {
         defaults: function() {
             return {
                 id: '',
-                name: ''
+                name: '',
+                mile: 0,
+                mileFrom: 0,
+                mileTo: 0
             }
         }
     })
