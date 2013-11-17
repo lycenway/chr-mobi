@@ -1,5 +1,6 @@
 define(['backbone',
     '../../component/date',
+    '../../component/mile',
     'zepto',
     '../collection/visit-business-type',
     '../collection/visit-case-type',
@@ -7,8 +8,9 @@ define(['backbone',
     '../collection/marketingTool',
     '../collection/visitIssue',
     './account',
+    './case-mile',
     './visitPartner'
-], function(Backbone, DateUtil, $, VisitBusinessTypeCollection, VisitCaseTypeCollection, VisitStageCollection, MarketingToolCollection, VisitIssueCollection,Account, VisitPartner) {
+], function(Backbone, DateUtil, MileUtil, $, VisitBusinessTypeCollection, VisitCaseTypeCollection, VisitStageCollection, MarketingToolCollection, VisitIssueCollection, Account, CaseMile, VisitPartner) {
     return Backbone.Model.extend({
         url: function() {
             var url = '/visit'
@@ -143,7 +145,7 @@ define(['backbone',
 
         validate: function() {
             if (!this.get('account').id || this.get('account').id == '') {
-                return '请填写线|段|里程！'
+                return '请选择线|段|起止！'
             }
             // if (this.get('visitDate') == '') {
             //     return '请填写采集日期！'
@@ -177,6 +179,7 @@ define(['backbone',
         defaults: function() {
             return {
                 account: {},
+                caseMile: {num: 256.128, kiloShow: MileUtil.formatMile(256.128)},
                 id: null,
                 stage: '',
                 description: '',

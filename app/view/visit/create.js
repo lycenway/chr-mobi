@@ -6,12 +6,13 @@ define([
 	'./create-select-status',
 	'./create-select-casetype',
 	'./create-select-date',
+	'./create-select-casemile',
 	'../../ga',
 	'app/../../component/autoSave',
 	'../../loading',
 	'../../collection/selected-account',
 	'../../../component/autogrow-textarea'
-], function(Backbone, $, App, Tpl, SelectStatusView, SelectCaseTypeView, SelectStatusDate, gaPlugin, localCache, Loading, SelectedAccounts) {
+], function(Backbone, $, App, Tpl, SelectStatusView, SelectCaseTypeView, SelectStatusDate, SelectCaseMile, gaPlugin, localCache, Loading, SelectedAccounts) {
 	return Backbone.View.extend({
 		className: 'visitCreateContainer',
 		
@@ -25,7 +26,8 @@ define([
 			'swipeRight .visit-mate-edit': 'removePartner',
 			'tap .marketing-tools .container': 'selectMarketingTool',
 			'tap .caseimage-tools .container': 'setCasePicture',
-			'tap .visit-casetype-edit': 'showSelectCaseType'
+			'tap .visit-casetype-edit': 'showSelectCaseType',
+			'tap .case-mile-edit': 'showCaseMile'
 		},
 
 		initialize: function() {
@@ -162,6 +164,13 @@ define([
 			App.router.navigate('visits/search-shop/' + shopName, {
 				trigger: true
 			})
+		},
+
+		showCaseMile: function(e) {
+			var selectCaseMile = new SelectCaseMile({
+				model: this.model
+			})
+			selectCaseMile.render()
 		},
 
 		showVisitMateSelect: function() {

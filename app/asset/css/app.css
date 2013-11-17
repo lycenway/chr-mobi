@@ -1081,6 +1081,7 @@ footer {
   color: #737373;
 }
 .visits-create .parameter dl dd .shop-name,
+.visits-create .parameter dl dd .case-mile,
 .visits-create .parameter dl dd .partner-name {
   max-width: 90%;
   display: block;
